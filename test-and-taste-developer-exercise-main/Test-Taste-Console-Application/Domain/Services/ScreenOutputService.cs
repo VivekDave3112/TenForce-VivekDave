@@ -22,6 +22,8 @@ namespace Test_Taste_Console_Application.Domain.Services
 
         public void OutputAllPlanetsAndTheirMoonsToConsole()
         {
+            Console.WriteLine("Loading data for All Planets And Their Moons...");
+            Console.WriteLine("\n");
             //The service gets all the planets from the API.
             var planets = _planetService.GetAllPlanets().ToArray();
 
@@ -32,6 +34,8 @@ namespace Test_Taste_Console_Application.Domain.Services
                 return;
             }
 
+            Console.WriteLine("Writing data for All Planets And Their Moons...");
+            Console.WriteLine("\n");
             //The column sizes and labels for the planets are configured here. 
             var columnSizesForPlanets = new[] { 20, 20, 30, 20 };
             var columnLabelsForPlanets = new[]
@@ -101,6 +105,8 @@ namespace Test_Taste_Console_Application.Domain.Services
 
         public void OutputAllMoonsAndTheirMassToConsole()
         {
+            Console.WriteLine("Loading data for All Moons And Their Mass...");
+            Console.WriteLine("\n");
             //The function works the same way as the PrintAllPlanetsAndTheirMoonsToConsole function. You can find more comments there.
             var moons = _moonService.GetAllMoons().ToArray();
             
@@ -110,6 +116,8 @@ namespace Test_Taste_Console_Application.Domain.Services
                 return;
             }
 
+            Console.WriteLine("Writing data for All Moons And Their Mass...");
+            Console.WriteLine("\n");
             var columnSizesForMoons = new[] { 20, 20, 30, 20 };
             var columnLabelsForMoons = new[]
             {
@@ -145,6 +153,9 @@ namespace Test_Taste_Console_Application.Domain.Services
 
         public void OutputAllPlanetsAndTheirAverageMoonGravityToConsole()
         {
+            Console.WriteLine("\n");
+            Console.WriteLine("Loading data for All Planets And Their Average Moon Gravity...");
+            Console.WriteLine("\n");
             //The function works the same way as the PrintAllPlanetsAndTheirMoonsToConsole function. You can find more comments there.
             var planets = _planetService.GetAllPlanets().ToArray();
             if (!planets.Any())
@@ -153,6 +164,8 @@ namespace Test_Taste_Console_Application.Domain.Services
                 return;
             }
 
+            Console.WriteLine("Writing data for All Planets And Their Average Moon Gravity...");
+            Console.WriteLine("\n");
             var columnSizes = new[] { 20, 30 };
             var columnLabels = new[]
             {

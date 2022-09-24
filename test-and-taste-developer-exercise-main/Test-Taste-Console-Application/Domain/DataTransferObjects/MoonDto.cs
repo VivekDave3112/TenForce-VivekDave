@@ -23,6 +23,9 @@ namespace Test_Taste_Console_Application.Domain.DataTransferObjects
         [JsonProperty("rel")] public string Rel { get; set; }
         public string URLId { get => Rel.Split('/').Last(); }
 
+        //For getting the gravity Property fetched by the Api.
+        [JsonProperty("gravity")] public float Gravity { get; set; }
+
         //The path to the nested property is created by using a dot. 
         [JsonProperty("mass.massValue")] public float MassValue { get; set; }
         [JsonProperty("mass.massExponent")] public float MassExponent { get; set; }
